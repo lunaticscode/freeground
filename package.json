@@ -3,18 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 5001",
     "build": "next build",
     "start": "next start",
+    "prod-start": "next start -p 5003",
+    "stg-start": "next start -p 5002",
     "lint": "next lint"
   },
   "dependencies": {
     "next": "11.1.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "styled-components": "^5.3.1",
+    "styled-normalize": "^8.0.7"
   },
   "devDependencies": {
     "@types/react": "17.0.24",
+    "@types/styled-components": "^5.1.14",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
     "typescript": "4.4.3"
