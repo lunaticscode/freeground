@@ -12,11 +12,11 @@ const Mobile = styled.div`
         display: block;
     }
 `
+
 interface ScreenSwitchProps {
     getScreen: ( screen: string ) => void;
 }
 const ScreenSwitch:React.FC<ScreenSwitchProps> = ({ getScreen }) => {
-    
     const size = useWindowSize();
     size ? ( size >= 1040 ? getScreen('desktop') : getScreen('mobile') ) : getScreen("") 
     return (
