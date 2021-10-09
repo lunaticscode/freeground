@@ -16,9 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@pages/*" : ["pages/*"],
-      "@helper/*" : ["src/helper/*"],
-      "@hooks/*" : ["src/hooks/*"],
-      "@stories/*" : ["src/stories/*"]
+      "@helper/*" : ["util/helper/*"],
+      "@hooks/*" : ["util/hooks/*"],
+      "@stories/*" : ["util/stories/*"],
+      "@styles/*": ["styles/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

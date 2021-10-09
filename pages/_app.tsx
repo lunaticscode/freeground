@@ -1,33 +1,52 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import ScreenSwitch from '@helper/ScreenSwitch';
+import ScreenSwitch from 'util/helper/ScreenSwitch';
 import { useState } from 'react';
-import '@stories/button.css';
-import '@stories/header.css';
-import "styles/globals.css"
-import { Header } from '@stories/Header';
+import {HedaerIndex, UserProps} from '../components/Header/HeaderIndex';
 
 function MyApp({ Component, pageProps }: AppProps) {
 
   const [screenMode, setScreenMode ] = useState("");
+  const [userInfo, setUserInfo] = useState<UserProps>({email: "", username: ""});
   const getScreen = (screen: string) => {
     console.log(screen);
     setScreenMode(screen);
   }
+  
+  const onLogin = () => {
+
+  }
+
+  const onLogout = () => {
+
+  }
+  const onCreateAccount = () => {
+
+  }
+
+  /**
+   *    HeaderProps
+   *    user?: UserProps;
+        title: string,
+        imgPath: string,
+        titleColor: string,
+        onLogin: () => void;
+        onLogout: () => void;
+        onCreateAccount: () => void;
+   */
   return (
     <>
     <ScreenSwitch
       getScreen = {getScreen}
     />
-       {/* <Header
-      title={"Freenground"}
-      titleColor={"black"}
-      user={{email: 'test@test.com', username: 'humanwater'}}
-      onLogin={onLogin}
-      imgPath={"@stories/assets/vercel.svg"}
-      onLogout={onLogout} 
-      onCreateAccount={onCreateAccount} 
-   /> */}
+    
+    <HedaerIndex
+        user={userInfo}
+        screenMode={screenMode}
+        onLogin={onLogin}
+        onLogout={onLogout}
+        onCreateAccount={onCreateAccount}
+    /> 
     <Component 
             {...pageProps} 
             screenMode = {screenMode}
