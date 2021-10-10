@@ -67,7 +67,7 @@ export const HedaerIndex:React.FC<HeaderProps> = ( {
                         :
                         "Login"
                     }
-                    Login
+                    
                 </_Button>
                 
             </_HeaderContentLayout>

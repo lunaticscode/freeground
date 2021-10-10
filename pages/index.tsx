@@ -7,7 +7,7 @@ interface IndexPageProps {
 
 const Home: NextPage<IndexPageProps> = ({ children, screenMode }) => {
   const onLogin = () => {
-
+    
   }
   const onLogout= () => {
     

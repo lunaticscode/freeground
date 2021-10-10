@@ -12,11 +12,8 @@ export const _HeaderWrapper = styled.div`
     display: flex;
     align-items: center;
     background-color: ${HEADER_BACKGROUND_COLOR};
-    border-bottom-color: ${HEADER_BORDER_BOTTOM_COLOR};
-    border-left: 4px solid ${HEADER_BACKGROUND_COLOR};
-    border-right: 4px solid ${HEADER_BACKGROUND_COLOR};
-    border-bottom: 1px solid ${HEADER_BORDER_BOTTOM_COLOR};
-    box-shadow: 0px 3px 2px ${HEADER_BORDER_BOTTOM_COLOR};
+    border-bottom: 2px solid ${HEADER_BORDER_BOTTOM_COLOR};
+    box-shadow: 0px 2px 5px ${HEADER_BORDER_BOTTOM_COLOR};
 `
 export const _HeaderContentLayout = styled.div`
     display: flex;
