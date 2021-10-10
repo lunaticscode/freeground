@@ -1,13 +1,16 @@
 import React, {useEffect, useState} from 'react';
-import { _HeaderLayout } from '@styles/_components/_Header'
+//import { _HeaderLayout } from '@styles/_components/_Header'
+import { _HeaderWrapper, _HeaderContentLayout } from '../../styles/_components/_Header';
+import { _Button } from '../../styles/_components/_Button';
+
 export interface UserProps { 
-    email: string;
-    username: string;
+    email: string | null | undefined;
+    username: string | null | undefined;
 }
 
 export interface HeaderProps {
     screenMode: string;
-    user: UserProps;
+    user: UserProps | null;
     imgPath?: string,
     title?: string,
     titleSize?: string,
@@ -48,26 +51,46 @@ export const HedaerIndex:React.FC<HeaderProps> = ( {
                 borderBottom: '1px solid '+titleBorderBottomColor,
                 boxShadow: '0px 5px 3px '+titleBorderBottomColor,
             }} > */}
-            <_HeaderLayout>
+            <_HeaderWrapper>
         {
             ( screenMode === 'desktop' )
             ?
-            <div>
+            <_HeaderContentLayout>
                 <div style={{ color: titleColor, fontSize: titleSize, fontWeight: titleWeight }} >
                     {title}
                 </div>
-            </div>
+                <_Button>
+                    {
+                        ( user && user.email && user.username )
+                        ?
+                        "Logout"
+                        :
+                        "Login"
+                    }
+                    Login
+                </_Button>
+                
+            </_HeaderContentLayout>
             :
-            <div>
+            <_HeaderContentLayout>
                 <div style={{ color: titleColor, fontSize: titleSize, fontWeight: titleWeight }} >
                     {title}
                 </div>
-            </div>
+                <_Button>
+                    {
+                        ( user && user.email && user.username )
+                        ?
+                        "Logout"
+                        :
+                        "Login"
+                    }
+                </_Button>
+            </_HeaderContentLayout>
             
         }
        
         {/* </header> */}
-        </_HeaderLayout>
+        </_HeaderWrapper>
         </>
     )
 }

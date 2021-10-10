@@ -12,8 +12,10 @@ const Template: ComponentStory<typeof HedaerIndex> = (args) => <HedaerIndex {...
 
 export const LoggedIn = Template.bind({});
 LoggedIn.args = {
-  //user: { email: "test@test.com", username: "humanwater" },
+  user: { email: "test@test.com", username: "humanwater" },
 };
 
 export const LoggedOut = Template.bind({});
-LoggedOut.args = {};
+LoggedOut.args = {
+  user: null
+};

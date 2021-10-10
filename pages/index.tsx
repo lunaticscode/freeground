@@ -17,7 +17,7 @@ const Home: NextPage<IndexPageProps> = ({ children, screenMode }) => {
   }
   return (
    <>
-
+    
     {screenMode}
    </>
   )
