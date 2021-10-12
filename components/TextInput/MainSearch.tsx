@@ -5,7 +5,7 @@ export interface MainSearchProps {
     searchKeyword: ( keyword: string ) => void;
 }
 
-export const MainSearch:React.FC<MainSearchProps> = ({ placeholder="검색어 입력", searchKeyword }) => {
+export const MainSearch:React.FC<MainSearchProps> = ({ placeholder="Search for your keyword", searchKeyword }) => {
 
     const [ inputWord, setInputWord ] = useState<string | null | undefined>("");
     const [ nowStatus, setStatus] = useState<string>("");

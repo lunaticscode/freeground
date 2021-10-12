@@ -1,6 +1,5 @@
 import styled, {css} from 'styled-components';
-import { MainSearchProps } from '../../components/TextInput/MainSearch'
-
+import { DEFAULT_STYLE, INPUT_STYLE } from '../_styles_config'
 //const INPUT_DEFAULT_BORDER_COLOR = "silver";
 const HEADER_BORDER_BOTTOM_COLOR: string = "#73e9e9";
 
@@ -17,7 +16,7 @@ export const _MainSearchWrapper = styled.div<_MainSearchWrapper>`
     margin-left:5%;   
     ${ props => ( props.status === "active" ) && css `
         border-color: white;
-        box-shadow: 0px 0px 5px ${HEADER_BORDER_BOTTOM_COLOR}
+        box-shadow: 0px 0px 5px ${INPUT_STYLE.ACTIVE.BORDER_COLOR};
     `}
     
 `
@@ -31,7 +30,7 @@ export const _MainSearchInput = styled.input`
     font-weight:bold;
     //border: 1px solid silver;
     &::placeholder{
-        color: silver;
+        color: ${DEFAULT_STYLE.TEXT.INPUT_PLACEHOLDER_COLOR};
     }
     
 `

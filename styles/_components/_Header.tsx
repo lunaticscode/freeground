@@ -1,19 +1,15 @@
 import styled, {css} from 'styled-components';
-
-const HEADER_BACKGROUND_COLOR:string = "#4e4e4e";
-const HEADER_BORDER_BOTTOM_COLOR: string = "#73e9e9";
-const TITLE_TEXT_COLOR:string = "#ececec";
-const TITLE_WEIGHT:number = 600; 
+import { HEADER_STYLE } from '../_styles_config';
 
 export const _HeaderWrapper = styled.div`
     width: 100%;
-    height:80px;
+    height: ${ HEADER_STYLE.HEIGHT_NUMBER + "px" };
     padding: 0px 10px;
     display: flex;
     align-items: center;
-    background-color: ${HEADER_BACKGROUND_COLOR};
-    border-bottom: 2px solid ${HEADER_BORDER_BOTTOM_COLOR};
-    box-shadow: 0px 2px 5px ${HEADER_BORDER_BOTTOM_COLOR};
+    background-color: ${HEADER_STYLE.BACKGROUND_COLOR};
+    border-bottom: 2px solid ${HEADER_STYLE.BOTTOM_LINE_COLOR};
+    box-shadow: 0px 2px 5px ${HEADER_STYLE.BOTTOM_LINE_COLOR};
 `
 export const _HeaderContentLayout = styled.div`
     display: flex;
